@@ -57,7 +57,7 @@ module EventMachine
       return result
     end
     
-    def call(funcs)
+    def concurrent_call(funcs)
       concurrent_each_with_index(funcs) do |f, i|
         f.()
       end
